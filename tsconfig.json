@@ -8,13 +8,12 @@
     "resolveJsonModule": true,
     "outDir": "./dist",
     "rootDir": "./",
-    "baseUrl": ".",
     "paths": {
-      "@pages/*": ["pages/*"],
-      "@components/*": ["components/*"],
-      "@fixtures/*": ["fixtures/*"],
-      "@utils/*": ["utils/*"],
-      "@test-data/*": ["test-data/*"]
+      "@pages/*": ["./pages/*"],
+      "@components/*": ["./components/*"],
+      "@fixtures/*": ["./fixtures/*"],
+      "@utils/*": ["./utils/*"],
+      "@test-data/*": ["./test-data/*"]
     }
   },
   "include": ["**/*.ts"],
