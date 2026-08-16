@@ -1,0 +1,16 @@
+{
+  "employees": [
+    {
+      "firstName": "John",
+      "middleName": "Michael",
+      "lastName": "TestUser",
+      "note": "Employee untuk positive test case"
+    },
+    {
+      "firstName": "Jane",
+      "middleName": "",
+      "lastName": "SampleEmployee",
+      "note": "Employee tanpa middle name"
+    }
+  ]
+}

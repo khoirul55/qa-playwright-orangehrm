@@ -1,0 +1,55 @@
+/**
+ * Test data: berbagai tipe user untuk data-driven testing.
+ * Dipakai di login.spec.ts untuk skenario negatif & positif.
+ */
+{
+  "validUser": {
+    "username": "Admin",
+    "password": "admin123",
+    "expectedRedirect": "/dashboard/index"
+  },
+  "invalidUsers": [
+    {
+      "scenario": "Wrong password",
+      "username": "Admin",
+      "password": "wrongpassword",
+      "expectedError": "Invalid credentials"
+    },
+    {
+      "scenario": "Wrong username",
+      "username": "wronguser",
+      "password": "admin123",
+      "expectedError": "Invalid credentials"
+    },
+    {
+      "scenario": "Empty username",
+      "username": "",
+      "password": "admin123",
+      "expectedError": "Required"
+    },
+    {
+      "scenario": "Empty password",
+      "username": "Admin",
+      "password": "",
+      "expectedError": "Required"
+    },
+    {
+      "scenario": "Both empty",
+      "username": "",
+      "password": "",
+      "expectedError": "Required"
+    },
+    {
+      "scenario": "SQL injection attempt",
+      "username": "' OR '1'='1",
+      "password": "' OR '1'='1",
+      "expectedError": "Invalid credentials"
+    },
+    {
+      "scenario": "XSS attempt",
+      "username": "<script>alert('xss')</script>",
+      "password": "admin123",
+      "expectedError": "Invalid credentials"
+    }
+  ]
+}
