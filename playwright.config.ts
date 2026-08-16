@@ -12,11 +12,16 @@ export default defineConfig({
   timeout: 60000,
   expect: { timeout: 10000 },
 
-  reporter: [
-    ['html', { outputFolder: 'playwright-report', open: 'never' }],
-    ['allure-playwright', { detail: true, outputFolder: 'allure-results', suiteTitle: false }],
-    ['list'],
-  ],
+  reporter: process.env.CI
+    ? [
+        ['html', { outputFolder: 'playwright-report', open: 'never' }],
+        ['junit', { outputFile: 'test-results/results.xml' }],
+        ['list'],
+      ]
+    : [
+        ['html', { outputFolder: 'playwright-report', open: 'never' }],
+        ['list'],
+      ],
 
   use: {
     baseURL: process.env.BASE_URL || 'https://opensource-demo.orangehrmlive.com',
