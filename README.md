@@ -1,13 +1,16 @@
 # 🎭 QA Automation Portfolio — OrangeHRM
 
-![Playwright Tests](https://github.com/khoirul-gunawan/qa-playwright-orangehrm/actions/workflows/playwright.yml/badge.svg)
+![Playwright Tests](https://github.com/khoirul55/qa-playwright-orangehrm/actions/workflows/playwright.yml/badge.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)
 ![Playwright](https://img.shields.io/badge/Playwright-1.48-green?logo=playwright)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-> **Automated End-to-End Test Suite** untuk [OrangeHRM](https://opensource-demo.orangehrmlive.com) menggunakan **Playwright + TypeScript** dengan pola **Page Object Model**.
+> **Portfolio Project #1** — Automated End-to-End Test Suite untuk [OrangeHRM](https://opensource-demo.orangehrmlive.com) menggunakan **Playwright + TypeScript** dengan pola **Page Object Model**.
 >
-> Proyek ini merupakan bagian dari portofolio QA Engineering dengan fokus pada best practices yang digunakan di industri.
+> Proyek ini merupakan bagian dari portofolio QA Engineering dengan fokus pada best practices yang digunakan di industri modern.
+
+📄 **Live Test Report:** [GitHub Pages](https://khoirul55.github.io/qa-playwright-orangehrm/)
+🔗 **Portfolio #2:** [Selenium + Java (SauceDemo)](https://github.com/khoirul55/selenium-java-e2e-framework)
 
 ---
 
@@ -87,7 +90,7 @@ qa-playwright-orangehrm/
 ### Instalasi
 ```bash
 # 1. Clone repository
-git clone https://github.com/khoirul-gunawan/qa-playwright-orangehrm.git
+git clone https://github.com/khoirul55/qa-playwright-orangehrm.git
 cd qa-playwright-orangehrm
 
 # 2. Install dependencies
@@ -131,6 +134,19 @@ npm run report:html
 npm run report:allure:generate
 npm run report:allure
 ```
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **TypeScript** | Programming language |
+| **Playwright 1.48** | Modern E2E browser automation |
+| **Axe-core** | Accessibility (WCAG 2.1) auditing |
+| **Allure Report** | Interactive visual test reporting |
+| **GitHub Actions** | CI/CD pipeline |
+| **Node.js** | Runtime environment |
 
 ---
 
@@ -182,30 +198,37 @@ Menggunakan `@axe-core/playwright` untuk audit WCAG 2.1:
 
 ## 🤖 CI/CD Pipeline
 
-Pipeline otomatis berjalan di GitHub Actions:
+Pipeline otomatis berjalan di GitHub Actions divisualisasikan dalam diagram berikut:
 
-```
-Push/PR ke main
-    ↓
-Run Tests (Chromium + Firefox + WebKit secara paralel)
-    ↓
-Upload Artifacts (HTML Report + Allure Results)
-    ↓
-Generate & Publish Allure Report → GitHub Pages
+```mermaid
+graph LR
+    A[Push/PR ke main] --> B[Checkout Code]
+    B --> C[Setup Node.js]
+    C --> D[Install Dependencies]
+    D --> E[Install Playwright Browsers]
+    E --> F[Run Tests: WebKit, Firefox, Chromium]
+    F --> G{Tests Pass?}
+    G -->|Yes| H[Upload Allure Results]
+    G -->|No| I[Upload Screenshots & Traces]
+    H --> J[Generate Allure Report]
+    I --> J
+    J --> K[Deploy to GitHub Pages]
 ```
 
-🔗 **Live Allure Report**: `https://khoirul-gunawan.github.io/qa-playwright-orangehrm`
+🔗 **Live Allure Report**: [https://khoirul55.github.io/qa-playwright-orangehrm/](https://khoirul55.github.io/qa-playwright-orangehrm/)
 
 ---
 
-## 👨‍💻 Tentang Penulis
+## 👤 Author
 
-**Khoirul Gunawan**
+**Khoirul** — QA Engineer
 
 Seorang professional dengan background Full Stack Developer (React, Next.js, Laravel) yang sedang bertransisi ke QA Engineer. Kombinasi keahlian development dan testing memungkinkan pendekatan yang lebih komprehensif dalam quality assurance.
 
-- 💼 [LinkedIn](https://www.linkedin.com/in/khoirul-gunawan5/)
-- 🐙 [GitHub](https://github.com/khoirul55)
+- 🔗 GitHub: [@khoirul55](https://github.com/khoirul55)
+- 💼 LinkedIn: [Khoirul Gunawan](https://www.linkedin.com/in/khoirul-gunawan5/)
+- 📁 Portfolio #1: [Playwright + TypeScript (OrangeHRM)](https://github.com/khoirul55/qa-playwright-orangehrm) ← *You are here*
+- 📁 Portfolio #2: [Selenium + Java (SauceDemo)](https://github.com/khoirul55/selenium-java-e2e-framework)
 
 ---
 
