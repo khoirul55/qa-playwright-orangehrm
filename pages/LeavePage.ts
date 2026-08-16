@@ -88,6 +88,11 @@ export class LeavePage extends BasePage {
     return this.leaveRows.count();
   }
 
+  /** Cek apakah ada tulisan No Records Found */
+  async hasNoRecords(): Promise<boolean> {
+    return this.noRecordsText.isVisible();
+  }
+
   /** Filter leave berdasarkan tanggal */
   async filterByDate(from: string, to: string) {
     await this.fillInput(this.filterFromDate, from);
