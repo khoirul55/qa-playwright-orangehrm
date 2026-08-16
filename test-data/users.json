@@ -1,7 +1,4 @@
-/**
- * Test data: berbagai tipe user untuk data-driven testing.
- * Dipakai di login.spec.ts untuk skenario negatif & positif.
- */
+
 {
   "validUser": {
     "username": "Admin",
