@@ -204,7 +204,7 @@ Generate & Publish Allure Report → GitHub Pages
 
 Seorang professional dengan background Full Stack Developer (React, Next.js, Laravel) yang sedang bertransisi ke QA Engineer. Kombinasi keahlian development dan testing memungkinkan pendekatan yang lebih komprehensif dalam quality assurance.
 
-- 💼 [LinkedIn](https://linkedin.com/in/khoirul-gunawan)
+- 💼 [LinkedIn](https://www.linkedin.com/in/khoirul-gunawan5/)
 - 🐙 [GitHub](https://github.com/khoirul55)
 
 ---
